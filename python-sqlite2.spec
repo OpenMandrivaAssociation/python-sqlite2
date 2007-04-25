@@ -1,18 +1,18 @@
 %define realname pysqlite
 
 Name:		python-sqlite2
-Version: 2.2.0
-Release: %mkrel 3
+Version: 2.3.3
+Release: %mkrel 1
 License:	GPL
 Group:		Development/Python
-Summary:	Python bindings for sqlite
-Source0:    http://initd.org/pub/software/pysqlite/releases/2.2/%version/%{realname}-%{version}.tar.bz2
+Summary:	Python bindings for sqlite3
+Source0:    http://initd.org/pub/software/pysqlite/releases/2.3/%version/%{realname}-%{version}.tar.bz2
 Url:		http://pysqlite.org
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: python-devel sqlite3-devel 
 
 %description
-This packages allows you to use sqlite with python.
+This packages allows you to use sqlite3 with python.
 sqliite is a simple database engine.
 
 %prep
