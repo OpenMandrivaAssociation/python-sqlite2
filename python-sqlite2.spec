@@ -1,7 +1,7 @@
 %define realname pysqlite
 
 Name:		python-sqlite2
-Version: 2.3.3
+Version: 2.3.5
 Release: %mkrel 1
 License:	GPL
 Group:		Development/Python
@@ -18,17 +18,24 @@ sqliite is a simple database engine.
 %prep
 %setup -q -n %{realname}-%version
 rm -f doc/rest/.*swp
-for i in examples doc; do
-	find $i -name CVS -type d | xargs rm -Rf 
-done;
+find doc -name CVS -type d | xargs rm -Rf 
+#gw don't know why this is missing
+cat >> setup.cfg << EOF
+[build_ext]
+libraries=sqlite3
+EOF
 
 %build
 
 
 %install
 rm -rf $RPM_BUILD_ROOT installed-docs
-python ./setup.py install --prefix=$RPM_BUILD_ROOT/%_prefix
+python ./setup.py install --root=%buildroot
 mv %buildroot%_prefix/pysqlite2-doc/ installed-docs
+
+%check
+cd %buildroot%py_platsitedir
+python -c "from pysqlite2 import test; test.test()"
 
 %clean
 rm -rf $RPM_BUILD_ROOT
