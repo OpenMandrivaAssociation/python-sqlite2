@@ -8,6 +8,7 @@ Group:		Development/Python
 Summary:	Python bindings for sqlite3
 Source0:    http://initd.org/pub/software/pysqlite/releases/2.3/%version/%{realname}-%{version}.tar.bz2
 Url:		http://pysqlite.org
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: python-devel sqlite3-devel 
 
 %description
