@@ -2,7 +2,7 @@
 
 Name:		python-sqlite2
 Version:	2.4.1
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	zlib
 Group:		Development/Python
 Summary:	Python bindings for sqlite3
