@@ -1,12 +1,12 @@
 %define realname pysqlite
 
 Name:		python-sqlite2
-Version:	2.4.1
-Release:	%mkrel 3
+Version:	2.5.5
+Release:	%mkrel 1
 License:	zlib
 Group:		Development/Python
 Summary:	Python bindings for sqlite3
-Source0:	http://initd.org/pub/software/pysqlite/releases/2.3/%version/%{realname}-%{version}.tar.bz2
+Source0:	http://oss.itsystementwicklung.de/trac/pysqlite/%{realname}-%{version}.tar.gz
 Url:		http://pysqlite.org
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	python-devel sqlite3-devel 
