@@ -21,14 +21,13 @@ sqliite is a simple database engine.
 %build
 
 %install
-python ./setup.py install --root=%{buildroot}
+%{__python2} ./setup.py install --root=%{buildroot}
 mv %{buildroot}%{_prefix}/pysqlite2-doc/ installed-docs
 
 %check
-cd %{buildroot}%{py_platsitedir}
-python -c "from pysqlite2 import test; test.test()"
+cd %{buildroot}%{py2_platsitedir}
+%{__python2} -c "from pysqlite2 import test; test.test()"
 
 %files
 %doc installed-docs/*
-%{py_platsitedir}/*
-
+%{py2_platsitedir}/*
