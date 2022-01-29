@@ -8,7 +8,7 @@ License:	zlib
 Group:		Development/Python
 Url:		http://pysqlite.org
 Source0:	http://oss.itsystementwicklung.de/trac/pysqlite/%{realname}-%{version}.tar.gz
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python2)
 BuildRequires:	pkgconfig(sqlite3)
 
 %description
