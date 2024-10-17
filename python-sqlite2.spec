@@ -6,7 +6,7 @@ Version:	2.6.3
 Release:	11
 License:	zlib
 Group:		Development/Python
-Url:		http://pysqlite.org
+Url:		https://pysqlite.org
 Source0:	http://oss.itsystementwicklung.de/trac/pysqlite/%{realname}-%{version}.tar.gz
 BuildRequires:	pkgconfig(python2)
 BuildRequires:	pkgconfig(sqlite3)
